@@ -2,7 +2,9 @@
 // STUDYFLOW - MAIN JAVASCRIPT
 // ==========================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:")
+    ? (localStorage.getItem("studyflow_api_url") || "http://127.0.0.1:8000")
+    : (localStorage.getItem("studyflow_api_url") || "https://studyflow-backend.onrender.com");
 
 let tasks = [];
 let editingTaskId = null;
