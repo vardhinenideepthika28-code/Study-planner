@@ -4,7 +4,7 @@
 
 const API_URL = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:")
     ? (localStorage.getItem("studyflow_api_url") || "http://127.0.0.1:8000")
-    : (localStorage.getItem("studyflow_api_url") || "https://studyflow-backend.onrender.com");
+    : (localStorage.getItem("studyflow_api_url") || "https://study-planner-ng92.onrender.com");
 
 
 // ==========================================
