@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import date
-from typing import Optional
+from typing import Optional, Union
 
 
 # -------------------------
@@ -19,7 +19,7 @@ class UserLogin(BaseModel):
 
 
 class UserResponse(BaseModel):
-    id: int
+    id: Union[str, int]
     full_name: str
     email: str
 
@@ -49,14 +49,17 @@ class TaskUpdate(BaseModel):
 
 
 class TaskResponse(BaseModel):
-    id: int
+    id: Union[str, int]
     title: str
-    description: Optional[str]
+    description: Optional[str] = None
     subject: str
     priority: str
-    deadline: Optional[date]
+    deadline: Optional[date] = None
     completed: bool
-    user_id: int
+    user_id: Union[str, int]
+
+    class Config:
+        from_attributes = True
 
     class Config:
         from_attributes = True
