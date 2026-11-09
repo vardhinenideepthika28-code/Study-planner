@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | StudyFlow</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <section class="auth-left">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    ✦
+                </div>
+
+                <span>
+                    StudyFlow
+                </span>
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <span class="small-label">
+                    START YOUR JOURNEY
+                </span>
+
+                <h1>
+                    Turn your goals<br>
+                    into <span>progress.</span>
+                </h1>
+
+                <p>
+                    Create your StudyFlow account and build a smarter,
+                    more organized study routine.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <!-- Feature 1 -->
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Organize Everything
+                            </h3>
+
+                            <p>
+                                Keep your subjects and study tasks in one place.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Manage Your Time
+                            </h3>
+
+                            <p>
+                                Plan your study schedule and deadlines.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ★
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Reach Your Goals
+                            </h3>
+
+                            <p>
+                                Track your progress and stay motivated.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="auth-footer">
+
+                <span>
+                    © 2026 StudyFlow
+                </span>
+
+                <span>
+                    Made for students
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <section class="auth-right">
+
+            <div class="login-card signup-card">
+
+
+                <!-- Mobile Brand -->
+
+                <div class="mobile-brand">
+
+                    <div class="brand-icon">
+                        ✦
+                    </div>
+
+                    <span>
+                        StudyFlow
+                    </span>
+
+                </div>
+
+
+                <!-- Heading -->
+
+                <div class="login-heading">
+
+                    <div class="welcome-badge">
+                        🚀 Get started
+                    </div>
+
+                    <h2>
+                        Create your account.
+                    </h2>
+
+                    <p>
+                        Join StudyFlow and start planning smarter.
+                    </p>
+
+                </div>
+
+
+                <!-- ================= SIGNUP FORM ================= -->
+
+                <form id="signupForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="input-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ◉
+                            </span>
+
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                            <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ⌑
+                            </span>
+
+                            <input type="password" id="signupPassword" name="password" placeholder="Create a password"
+                                required minlength="6">
+
+                            <button type="button" class="password-toggle" id="toggleSignupPassword"
+                                aria-label="Show password">
+                                ◉
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="input-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ⌑
+                            </span>
+
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm your password" required minlength="6">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="terms-row">
+
+                        <label class="checkbox-container">
+
+                            <input type="checkbox" id="terms" required>
+
+                            <span class="checkmark"></span>
+
+                            <span>
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Message -->
+
+                    <div id="signupMessage" class="form-message"></div>
+
+
+                    <!-- Create Account Button -->
+
+                    <button type="submit" class="primary-btn">
+
+                        <span>
+                            Create StudyFlow Account
+                        </span>
+
+                        <span class="btn-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+
+                <!-- Login -->
+
+                <div class="signup-text">
+
+                    Already have an account?
+
+                    <a href="index.html">
+                        Login here
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

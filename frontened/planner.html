@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Planner | StudyFlow</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <span>
+                StudyFlow
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MENU
+            </p>
+
+            <a href="dashboard.html" class="nav-link">
+
+                <span class="nav-icon">⌂</span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="planner.html" class="nav-link active">
+
+                <span class="nav-icon">✓</span>
+
+                <span>
+                    Study Planner
+                </span>
+
+            </a>
+
+
+            <a href="schedule.html" class="nav-link">
+
+                <span class="nav-icon">◷</span>
+
+                <span>
+                    Schedule
+                </span>
+
+            </a>
+
+
+            <a href="progress.html" class="nav-link">
+
+                <span class="nav-icon">↗</span>
+
+                <span>
+                    Progress
+                </span>
+
+            </a>
+
+
+            <p class="nav-title nav-title-second">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-link" id="logoutBtn">
+
+                <span class="nav-icon">↪</span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="motivation-card">
+
+                <div class="motivation-icon">
+                    ✨
+                </div>
+
+                <h4>
+                    One task at a time
+                </h4>
+
+                <p>
+                    Focus on today's work and keep making progress.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div class="topbar-spacer"></div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="user-profile">
+
+                    <div class="user-avatar" id="userAvatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="userName">
+                            Student
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PLANNER CONTENT ================= -->
+
+        <section class="page-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <p class="greeting">
+                        Stay organized ✨
+                    </p>
+
+                    <h1>
+                        Study Planner
+                    </h1>
+
+                    <p>
+                        Plan your tasks, manage deadlines, and stay on track.
+                    </p>
+
+                </div>
+
+
+                <button class="add-task-btn" id="openTaskModal">
+
+                    <span>
+                        +
+                    </span>
+
+                    Add New Task
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= TASK STATS ================= -->
+
+            <div class="planner-stats">
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon purple">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Tasks
+                        </span>
+
+                        <strong id="plannerTotal">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <strong id="plannerCompleted">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong id="plannerPending">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon blue">
+                        %
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completion
+                        </span>
+
+                        <strong>
+                            <span id="plannerPercentage">
+                                0
+                            </span>%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TOOLBAR ================= -->
+
+            <div class="planner-toolbar">
+
+
+                <div class="search-box">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input type="text" id="taskSearch" placeholder="Search tasks...">
+
+                </div>
+
+
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="pending">
+                        Pending
+                    </button>
+
+                    <button class="filter-btn" data-filter="completed">
+                        Completed
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TASK LIST ================= -->
+
+            <section class="planner-card">
+
+                <div class="planner-card-header">
+
+                    <div>
+
+                        <h2>
+                            My Study Tasks
+                        </h2>
+
+                        <p>
+                            Complete your tasks and keep your study plan moving.
+                        </p>
+
+                    </div>
+
+                    <span id="taskCountLabel">
+                        0 tasks
+                    </span>
+
+                </div>
+
+
+                <div id="taskList" class="task-list">
+
+                    <!-- JavaScript will add tasks here -->
+
+                    <div class="planner-empty">
+
+                        <div class="planner-empty-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            Your planner is empty
+                        </h3>
+
+                        <p>
+                            Add your first study task to get started.
+                        </p>
+
+                        <button class="small-primary-btn" id="emptyAddTask">
+                            + Add Study Task
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="app-footer">
+
+            <span>
+                © 2026 StudyFlow
+            </span>
+
+            <span>
+                Plan smarter • Study better • Achieve more ✨
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= ADD TASK MODAL ================= -->
+
+    <div class="modal-overlay" id="taskModal">
+
+        <div class="task-modal">
+
+
+            <!-- Modal Header -->
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Add Study Task
+                    </h2>
+
+                    <p>
+                        Create a task for your study plan.
+                    </p>
+
+                </div>
+
+                <button type="button" class="modal-close" id="closeTaskModal">
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Task Form -->
+
+            <form id="taskForm">
+
+
+                <!-- Task Title -->
+
+                <div class="input-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input type="text" id="taskTitle" placeholder="Example: Complete DBMS assignment" required>
+
+                </div>
+
+
+                <!-- Subject -->
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="taskSubject">
+                            Subject
+                        </label>
+
+                        <input type="text" id="taskSubject" list="subjectSuggestions"
+                            placeholder="Search or enter subject" autocomplete="off" required>
+
+                        <datalist id="subjectSuggestions">
+                            <option value="DBMS">
+                            <option value="Data Structures">
+                            <option value="Operating Systems">
+                            <option value="Computer Networks">
+                            <option value="DAA">
+                            <option value="Machine Learning">
+                            <option value="Web Development">
+                            <option value="Python">
+                            <option value="Java">
+                            <option value="Artificial Intelligence">
+                            <option value="Cloud Computing">
+                            <option value="Cyber Security">
+                            <option value="Data Science">
+                        </datalist>
+
+                    </div>
+
+
+                    <!-- Deadline -->
+
+                    <div class="input-group">
+
+                        <label for="taskDeadline">
+                            Deadline
+                        </label>
+
+                        <input type="date" id="taskDeadline" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Priority -->
+
+                <div class="input-group">
+
+                    <label>
+                        Priority
+                    </label>
+
+                    <div class="priority-options">
+
+
+                        <label class="priority-option">
+
+                            <input type="radio" name="priority" value="Low">
+
+                            <span>
+                                Low
+                            </span>
+
+                        </label>
+
+
+                        <label class="priority-option">
+
+                            <input type="radio" name="priority" value="Medium" checked>
+
+                            <span>
+                                Medium
+                            </span>
+
+                        </label>
+
+
+                        <label class="priority-option">
+
+                            <input type="radio" name="priority" value="High">
+
+                            <span>
+                                High
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="input-group">
+
+                    <label for="taskDescription">
+                        Description
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    <textarea id="taskDescription" rows="4" placeholder="Add some notes about this task..."></textarea>
+
+                </div>
+
+
+                <!-- Modal Actions -->
+
+                <div class="modal-actions">
+
+                    <button type="button" class="cancel-btn" id="cancelTask">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="primary-btn">
+
+                        <span>
+                            Add Task
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

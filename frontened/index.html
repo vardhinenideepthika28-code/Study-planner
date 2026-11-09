@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow | Student Study Planner</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <!-- Left Side -->
+        <section class="auth-left">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <span>StudyFlow</span>
+            </div>
+
+            <div class="hero-content">
+
+                <span class="small-label">YOUR SMART STUDY COMPANION</span>
+
+                <h1>
+                    Plan smarter.<br>
+                    <span>Study better.</span>
+                </h1>
+
+                <p>
+                    Organize your subjects, manage your study tasks,
+                    track your progress, and stay ahead of your academic goals.
+                </p>
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h3>Smart Planning</h3>
+                            <p>Organize your daily study tasks easily.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">◷</div>
+                        <div>
+                            <h3>Track Progress</h3>
+                            <p>See how much of your work you've completed.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⌁</div>
+                        <div>
+                            <h3>Stay Consistent</h3>
+                            <p>Build a better study routine every day.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="auth-footer">
+                <span>© 2026 StudyFlow</span>
+                <span>Made for students</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right Side -->
+        <section class="auth-right">
+
+            <div class="login-card">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon">✦</div>
+                    <span>StudyFlow</span>
+                </div>
+
+                <div class="login-heading">
+
+                    <div class="welcome-badge">
+                        👋 Welcome back
+                    </div>
+
+                    <h2>Let's get productive.</h2>
+
+                    <p>
+                        Login to continue your study journey.
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">✉</span>
+
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">⌑</span>
+
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                required>
+
+                            <button type="button" class="password-toggle" id="togglePassword"
+                                aria-label="Show password">
+                                ◉
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Remember me -->
+                    <div class="remember-row">
+
+                        <label class="checkbox-container">
+
+                            <input type="checkbox" id="rememberMe">
+
+                            <span class="checkmark"></span>
+
+                            <span>Remember me</span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Error / Success message -->
+                    <div id="loginMessage" class="form-message"></div>
+
+
+                    <button type="submit" class="primary-btn">
+
+                        <span>Login to StudyFlow</span>
+
+                        <span class="btn-arrow">→</span>
+
+                    </button>
+
+                </form>
+
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+
+                <div class="signup-text">
+
+                    Don't have an account?
+
+                    <a href="signup.html">
+                        Create an account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

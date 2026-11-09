@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schedule | StudyFlow</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- Brand -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <span>
+                StudyFlow
+            </span>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MENU
+            </p>
+
+            <a href="dashboard.html" class="nav-link">
+
+                <span class="nav-icon">⌂</span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="planner.html" class="nav-link">
+
+                <span class="nav-icon">✓</span>
+
+                <span>
+                    Study Planner
+                </span>
+
+            </a>
+
+
+            <a href="schedule.html" class="nav-link active">
+
+                <span class="nav-icon">◷</span>
+
+                <span>
+                    Schedule
+                </span>
+
+            </a>
+
+
+            <a href="progress.html" class="nav-link">
+
+                <span class="nav-icon">↗</span>
+
+                <span>
+                    Progress
+                </span>
+
+            </a>
+
+
+            <p class="nav-title nav-title-second">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-link" id="logoutBtn">
+
+                <span class="nav-icon">↪</span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Motivation -->
+
+        <div class="sidebar-bottom">
+
+            <div class="motivation-card">
+
+                <div class="motivation-icon">
+                    📅
+                </div>
+
+                <h4>
+                    Plan your week
+                </h4>
+
+                <p>
+                    A good schedule turns busy days into productive ones.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div class="topbar-spacer"></div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="user-profile">
+
+                    <div class="user-avatar" id="userAvatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="userName">
+                            Student
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <section class="page-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <p class="greeting">
+                        Manage your time ⏰
+                    </p>
+
+                    <h1>
+                        Study Schedule
+                    </h1>
+
+                    <p>
+                        Organize your study sessions and make every hour count.
+                    </p>
+
+                </div>
+
+
+                <button class="add-task-btn" id="openScheduleModal">
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Study Session
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= WEEK NAVIGATION ================= -->
+
+            <section class="schedule-header-card">
+
+                <button class="week-arrow" id="previousWeek" title="Previous week">
+                    ←
+                </button>
+
+
+                <div class="current-week">
+
+                    <span>
+                        CURRENT WEEK
+                    </span>
+
+                    <h2 id="weekTitle">
+                        This Week
+                    </h2>
+
+                    <p id="weekRange">
+                        Your study schedule
+                    </p>
+
+                </div>
+
+
+                <button class="week-arrow" id="nextWeek" title="Next week">
+                    →
+                </button>
+
+            </section>
+
+
+            <!-- ================= WEEKLY SCHEDULE ================= -->
+
+            <section class="schedule-card">
+
+                <div class="schedule-card-header">
+
+                    <div>
+
+                        <h2>
+                            Weekly Timetable
+                        </h2>
+
+                        <p>
+                            Your planned study sessions
+                        </p>
+
+                    </div>
+
+                    <button class="today-btn" id="todayBtn">
+                        Today
+                    </button>
+
+                </div>
+
+
+                <!-- Timetable -->
+
+                <div class="timetable-wrapper">
+
+                    <div class="timetable" id="timetable">
+
+
+                        <!-- TIME COLUMN -->
+
+                        <div class="time-column">
+
+                            <div class="time-header">
+                                TIME
+                            </div>
+
+                            <div class="time-slot">
+                                06:00 AM
+                            </div>
+
+                            <div class="time-slot">
+                                08:00 AM
+                            </div>
+
+                            <div class="time-slot">
+                                10:00 AM
+                            </div>
+
+                            <div class="time-slot">
+                                12:00 PM
+                            </div>
+
+                            <div class="time-slot">
+                                02:00 PM
+                            </div>
+
+                            <div class="time-slot">
+                                04:00 PM
+                            </div>
+
+                            <div class="time-slot">
+                                06:00 PM
+                            </div>
+
+                            <div class="time-slot">
+                                08:00 PM
+                            </div>
+
+                            <div class="time-slot">
+                                10:00 PM
+                            </div>
+
+                        </div>
+
+
+                        <!-- MONDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    MON
+                                </span>
+
+                                <strong>
+                                    01
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Monday"></div>
+
+                        </div>
+
+
+                        <!-- TUESDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    TUE
+                                </span>
+
+                                <strong>
+                                    02
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Tuesday"></div>
+
+                        </div>
+
+
+                        <!-- WEDNESDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    WED
+                                </span>
+
+                                <strong>
+                                    03
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Wednesday"></div>
+
+                        </div>
+
+
+                        <!-- THURSDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    THU
+                                </span>
+
+                                <strong>
+                                    04
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Thursday"></div>
+
+                        </div>
+
+
+                        <!-- FRIDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    FRI
+                                </span>
+
+                                <strong>
+                                    05
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Friday"></div>
+
+                        </div>
+
+
+                        <!-- SATURDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    SAT
+                                </span>
+
+                                <strong>
+                                    06
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Saturday"></div>
+
+                        </div>
+
+
+                        <!-- SUNDAY -->
+
+                        <div class="day-column">
+
+                            <div class="day-header">
+
+                                <span>
+                                    SUN
+                                </span>
+
+                                <strong>
+                                    07
+                                </strong>
+
+                            </div>
+
+                            <div class="day-sessions" data-day="Sunday"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TODAY'S PLAN ================= -->
+
+            <section class="today-plan-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="greeting">
+                            Focus for today
+                        </p>
+
+                        <h2>
+                            Today's Study Plan
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="today-plan-grid" id="todayPlan">
+
+                    <!-- JavaScript will insert today's sessions -->
+
+                    <div class="schedule-empty">
+
+                        <div>
+                            📖
+                        </div>
+
+                        <h3>
+                            No sessions planned
+                        </h3>
+
+                        <p>
+                            Add a study session to organize your day.
+                        </p>
+
+                        <button class="small-primary-btn" id="emptyScheduleBtn">
+                            + Add Session
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="app-footer">
+
+            <span>
+                © 2026 StudyFlow
+            </span>
+
+            <span>
+                Plan smarter • Study better • Achieve more ✨
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= ADD SESSION MODAL ================= -->
+
+    <div class="modal-overlay" id="scheduleModal">
+
+        <div class="task-modal schedule-modal">
+
+
+            <!-- Modal Header -->
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Add Study Session
+                    </h2>
+
+                    <p>
+                        Schedule a focused study session.
+                    </p>
+
+                </div>
+
+                <button type="button" class="modal-close" id="closeScheduleModal">
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Session Form -->
+
+            <form id="scheduleForm">
+
+
+                <!-- Session Title -->
+
+                <div class="input-group">
+
+                    <label for="sessionTitle">
+                        Session Title
+                    </label>
+
+                    <input type="text" id="sessionTitle" placeholder="Example: DBMS Revision" required>
+
+                </div>
+
+
+                <!-- Subject -->
+
+                <div class="input-group">
+
+                    <label for="sessionSubject">
+                        Subject
+                    </label>
+
+                    <select id="sessionSubject" required>
+
+                        <option value="">
+                            Select subject
+                        </option>
+
+                        <option value="DBMS">
+                            DBMS
+                        </option>
+
+                        <option value="Data Structures">
+                            Data Structures
+                        </option>
+
+                        <option value="Operating Systems">
+                            Operating Systems
+                        </option>
+
+                        <option value="Computer Networks">
+                            Computer Networks
+                        </option>
+
+                        <option value="DAA">
+                            DAA
+                        </option>
+
+                        <option value="Machine Learning">
+                            Machine Learning
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Day -->
+
+                <div class="input-group">
+
+                    <label for="sessionDay">
+                        Day
+                    </label>
+
+                    <select id="sessionDay" required>
+
+                        <option value="">
+                            Select day
+                        </option>
+
+                        <option value="Monday">
+                            Monday
+                        </option>
+
+                        <option value="Tuesday">
+                            Tuesday
+                        </option>
+
+                        <option value="Wednesday">
+                            Wednesday
+                        </option>
+
+                        <option value="Thursday">
+                            Thursday
+                        </option>
+
+                        <option value="Friday">
+                            Friday
+                        </option>
+
+                        <option value="Saturday">
+                            Saturday
+                        </option>
+
+                        <option value="Sunday">
+                            Sunday
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="sessionStart">
+                            Start Time
+                        </label>
+
+                        <input type="time" id="sessionStart" required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="sessionEnd">
+                            End Time
+                        </label>
+
+                        <input type="time" id="sessionEnd" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Notes -->
+
+                <div class="input-group">
+
+                    <label for="sessionNotes">
+                        Notes
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    <textarea id="sessionNotes" rows="3" placeholder="What do you want to study?"></textarea>
+
+                </div>
+
+
+                <!-- Actions -->
+
+                <div class="modal-actions">
+
+                    <button type="button" class="cancel-btn" id="cancelSchedule">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="primary-btn">
+
+                        <span>
+                            Add Session
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

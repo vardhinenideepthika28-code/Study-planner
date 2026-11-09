@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progress | StudyFlow</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <span>
+                StudyFlow
+            </span>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MENU
+            </p>
+
+
+            <a href="dashboard.html" class="nav-link">
+
+                <span class="nav-icon">⌂</span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="planner.html" class="nav-link">
+
+                <span class="nav-icon">✓</span>
+
+                <span>
+                    Study Planner
+                </span>
+
+            </a>
+
+
+            <a href="schedule.html" class="nav-link">
+
+                <span class="nav-icon">◷</span>
+
+                <span>
+                    Schedule
+                </span>
+
+            </a>
+
+
+            <a href="progress.html" class="nav-link active">
+
+                <span class="nav-icon">↗</span>
+
+                <span>
+                    Progress
+                </span>
+
+            </a>
+
+
+            <p class="nav-title nav-title-second">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-link" id="logoutBtn">
+
+                <span class="nav-icon">
+                    ↪
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Motivation Card -->
+
+        <div class="sidebar-bottom">
+
+            <div class="motivation-card">
+
+                <div class="motivation-icon">
+                    🏆
+                </div>
+
+                <h4>
+                    Keep improving!
+                </h4>
+
+                <p>
+                    Every completed task is one step closer to your goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div class="topbar-spacer"></div>
+
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar" id="userAvatar">
+                        S
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong id="userName">
+                            Student
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <section class="page-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <p class="greeting">
+                        Look how far you've come 🚀
+                    </p>
+
+                    <h1>
+                        Your Progress
+                    </h1>
+
+                    <p>
+                        Track your study performance and celebrate your achievements.
+                    </p>
+
+                </div>
+
+
+                <a href="planner.html" class="add-task-btn">
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Study Task
+
+                </a>
+
+            </div>
+
+
+            <!-- ================= OVERVIEW ================= -->
+
+            <div class="progress-overview">
+
+
+                <!-- Main Progress -->
+
+                <section class="progress-main-card">
+
+                    <div class="progress-main-content">
+
+                        <div>
+
+                            <span class="progress-label">
+                                OVERALL PROGRESS
+                            </span>
+
+                            <h2>
+                                Keep pushing forward!
+                            </h2>
+
+                            <p id="overallProgressText">
+                                Complete your study tasks to improve your progress.
+                            </p>
+
+                        </div>
+
+
+                        <div class="big-progress-circle">
+
+                            <div class="big-progress-inner">
+
+                                <strong id="bigProgressPercentage">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Progress Bar -->
+
+                    <div class="large-progress-bar">
+
+                        <div class="large-progress-fill" id="largeProgressFill" style="width: 0%;"></div>
+
+                    </div>
+
+
+                    <div class="progress-bar-info">
+
+                        <span>
+                            <strong id="completedCount">
+                                0
+                            </strong>
+                            completed
+                        </span>
+
+                        <span>
+                            <strong id="totalCount">
+                                0
+                            </strong>
+                            total tasks
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Quick Stats -->
+
+                <div class="progress-stat-column">
+
+
+                    <div class="progress-small-card">
+
+                        <div class="progress-small-icon completed-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Completed
+                            </span>
+
+                            <strong id="progressCompleted">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-small-card">
+
+                        <div class="progress-small-icon pending-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong id="progressPending">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-small-card">
+
+                        <div class="progress-small-icon task-icon">
+                            ◎
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Tasks
+                            </span>
+
+                            <strong id="progressTotal">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SUBJECT PROGRESS ================= -->
+
+            <section class="dashboard-card subject-progress-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Subject-wise Progress
+                        </h2>
+
+                        <p>
+                            See how you're performing across your subjects.
+                        </p>
+
+                    </div>
+
+                    <span class="progress-star">
+                        📚
+                    </span>
+
+                </div>
+
+
+                <div class="subject-progress-list" id="subjectProgressList">
+
+                    <!-- JavaScript will generate subjects -->
+
+                    <div class="subject-empty">
+
+                        <div>
+                            📖
+                        </div>
+
+                        <h3>
+                            No subject data yet
+                        </h3>
+
+                        <p>
+                            Add study tasks to see your subject progress.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ACHIEVEMENTS ================= -->
+
+            <section class="achievements-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="greeting">
+                            Celebrate your wins 🎉
+                        </p>
+
+                        <h2>
+                            Achievements
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-grid">
+
+
+                    <!-- First Task -->
+
+                    <div class="achievement-card" id="achievementFirst">
+
+                        <div class="achievement-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                First Step
+                            </h3>
+
+                            <p>
+                                Complete your first study task.
+                            </p>
+
+                        </div>
+
+                        <span class="achievement-status">
+                            Locked
+                        </span>
+
+                    </div>
+
+
+                    <!-- Five Tasks -->
+
+                    <div class="achievement-card" id="achievementFive">
+
+                        <div class="achievement-icon">
+                            ⭐
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Getting Serious
+                            </h3>
+
+                            <p>
+                                Complete 5 study tasks.
+                            </p>
+
+                        </div>
+
+                        <span class="achievement-status">
+                            Locked
+                        </span>
+
+                    </div>
+
+
+                    <!-- Ten Tasks -->
+
+                    <div class="achievement-card" id="achievementTen">
+
+                        <div class="achievement-icon">
+                            🔥
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Study Streak
+                            </h3>
+
+                            <p>
+                                Complete 10 study tasks.
+                            </p>
+
+                        </div>
+
+                        <span class="achievement-status">
+                            Locked
+                        </span>
+
+                    </div>
+
+
+                    <!-- All Tasks -->
+
+                    <div class="achievement-card" id="achievementAll">
+
+                        <div class="achievement-icon">
+                            🏆
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Goal Crusher
+                            </h3>
+
+                            <p>
+                                Complete all your current tasks.
+                            </p>
+
+                        </div>
+
+                        <span class="achievement-status">
+                            Locked
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MOTIVATION ================= -->
+
+            <section class="progress-motivation">
+
+                <div class="motivation-large-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <h2 id="motivationTitle">
+                        Your journey starts with one task.
+                    </h2>
+
+                    <p id="motivationText">
+                        Don't worry about doing everything at once.
+                        Focus on one task, then the next.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="app-footer">
+
+            <span>
+                © 2026 StudyFlow
+            </span>
+
+            <span>
+                Plan smarter • Study better • Achieve more ✨
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

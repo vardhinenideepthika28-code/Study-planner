@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | StudyFlow</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <span>
+                StudyFlow
+            </span>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MENU
+            </p>
+
+            <a href="dashboard.html" class="nav-link active">
+
+                <span class="nav-icon">⌂</span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a href="planner.html" class="nav-link">
+
+                <span class="nav-icon">✓</span>
+
+                <span>
+                    Study Planner
+                </span>
+
+            </a>
+
+
+            <a href="schedule.html" class="nav-link">
+
+                <span class="nav-icon">◷</span>
+
+                <span>
+                    Schedule
+                </span>
+
+            </a>
+
+
+            <a href="progress.html" class="nav-link">
+
+                <span class="nav-icon">↗</span>
+
+                <span>
+                    Progress
+                </span>
+
+            </a>
+
+
+            <p class="nav-title nav-title-second">
+                ACCOUNT
+            </p>
+
+
+            <a href="#" class="nav-link" id="logoutBtn">
+
+                <span class="nav-icon">↪</span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="motivation-card">
+
+                <div class="motivation-icon">
+                    ✨
+                </div>
+
+                <h4>
+                    Keep going!
+                </h4>
+
+                <p>
+                    Small progress every day leads to big results.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+            <div class="topbar-spacer"></div>
+
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="user-profile">
+
+                    <div class="user-avatar" id="userAvatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="userName">
+                            Student
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="dashboard-container">
+
+
+            <!-- Welcome -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <p class="greeting">
+                        Good day 👋
+                    </p>
+
+                    <h1>
+                        Welcome back,
+                        <span id="welcomeName">
+                            Student
+                        </span>!
+                    </h1>
+
+                    <p class="welcome-text">
+                        Here's what's happening with your study plan today.
+                    </p>
+
+                </div>
+
+
+                <a href="planner.html" class="add-task-btn">
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Study Task
+
+                </a>
+
+            </div>
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <div class="stats-grid">
+
+
+                <!-- Total Tasks -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon purple">
+                            ◎
+                        </div>
+
+                        <span class="stat-label">
+                            TOTAL TASKS
+                        </span>
+
+                    </div>
+
+                    <div class="stat-number" id="totalTasks">
+                        0
+                    </div>
+
+                    <p class="stat-description">
+                        Tasks in your planner
+                    </p>
+
+                </div>
+
+
+                <!-- Completed -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+                            ✓
+                        </div>
+
+                        <span class="stat-label">
+                            COMPLETED
+                        </span>
+
+                    </div>
+
+                    <div class="stat-number" id="completedTasks">
+                        0
+                    </div>
+
+                    <p class="stat-description">
+                        Tasks completed
+                    </p>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+                            ◷
+                        </div>
+
+                        <span class="stat-label">
+                            PENDING
+                        </span>
+
+                    </div>
+
+                    <div class="stat-number" id="pendingTasks">
+                        0
+                    </div>
+
+                    <p class="stat-description">
+                        Tasks remaining
+                    </p>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+                            ↗
+                        </div>
+
+                        <span class="stat-label">
+                            PROGRESS
+                        </span>
+
+                    </div>
+
+                    <div class="stat-number">
+                        <span id="progressPercentage">
+                            0
+                        </span>%
+                    </div>
+
+                    <p class="stat-description">
+                        Overall completion
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TWO COLUMN AREA ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- RECENT TASKS -->
+
+                <section class="dashboard-card tasks-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Study Tasks
+                            </h2>
+
+                            <p>
+                                Your latest study activities
+                            </p>
+
+                        </div>
+
+                        <a href="planner.html">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div id="recentTasks" class="recent-tasks">
+
+                        <!-- Tasks will be inserted by JavaScript -->
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">
+                                📚
+                            </div>
+
+                            <h3>
+                                No study tasks yet
+                            </h3>
+
+                            <p>
+                                Start planning your studies by adding your first task.
+                            </p>
+
+                            <a href="planner.html" class="small-primary-btn">
+                                Add your first task
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= PROGRESS CARD ================= -->
+
+                <section class="dashboard-card progress-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Your Progress
+                            </h2>
+
+                            <p>
+                                Keep moving forward
+                            </p>
+
+                        </div>
+
+                        <span class="progress-star">
+                            ✨
+                        </span>
+
+                    </div>
+
+
+                    <!-- Circular Progress -->
+
+                    <div class="progress-circle-container">
+
+                        <div class="progress-circle" id="progressCircle">
+
+                            <div class="progress-circle-inner">
+
+                                <strong id="circlePercentage">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-message">
+
+                        <h3 id="progressTitle">
+                            Let's get started!
+                        </h3>
+
+                        <p id="progressMessage">
+                            Add some study tasks to begin tracking your progress.
+                        </p>
+
+                    </div>
+
+
+                    <a href="progress.html" class="view-progress-btn">
+                        View detailed progress →
+                    </a>
+
+                </section>
+
+            </div>
+
+
+            <!-- ================= QUICK ACTIONS ================= -->
+
+            <section class="quick-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                        <p>
+                            Manage your study journey quickly
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+
+                    <a href="planner.html" class="quick-card">
+
+                        <div class="quick-icon purple-bg">
+                            +
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Add Study Task
+                            </h3>
+
+                            <p>
+                                Create a new task
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="schedule.html" class="quick-card">
+
+                        <div class="quick-icon blue-bg">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                View Schedule
+                            </h3>
+
+                            <p>
+                                Check your timetable
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="progress.html" class="quick-card">
+
+                        <div class="quick-icon green-bg">
+                            ↗
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Track Progress
+                            </h3>
+
+                            <p>
+                                See your achievements
+                            </p>
+
+                        </div>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="app-footer">
+
+            <span>
+                © 2026 StudyFlow
+            </span>
+
+            <span>
+                Study smarter • Stay consistent • Achieve more ✨
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
